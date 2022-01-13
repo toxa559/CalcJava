@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/app_name"
+    android:background="@color/fon_relativ"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="245dp"
+        android:layout_height="96dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginStart="27dp"
+
+        android:layout_marginTop="251dp"
+        android:background="@drawable/style_design"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textIsSelectable="true"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/edit_price"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="27dp"
+        android:background="@drawable/style_design"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/vvedit_stoimost"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="@color/hint"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="119dp" />
+
+    <Spinner
+        android:id="@+id/spinner_money"
+        android:layout_width="116dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-25dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/edit_price"
+        android:background="@drawable/style_design_spiner"
+        android:entries="@array/money"
+        android:scrollbarSize="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateIds,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <EditText
+        android:id="@+id/edit_price_za"
+        android:layout_width="245dp"
+        android:layout_height="47dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="191dp"
+        android:background="@drawable/style_design"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/vvedit_ves_rashet"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="@color/hint"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <Spinner
+        android:id="@+id/spinner_two"
+        android:layout_width="78dp"
+        android:layout_height="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="191dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/edit_price_za"
+        android:background="@drawable/style_design_spiner"
+        android:entries="@array/units"
+
+
+        tools:layout_editor_absoluteY="119dp" />
+
+    <Button
+        android:id="@+id/btn_price"
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="131dp"
+        android:layout_marginEnd="83dp"
+        android:autofillHints="name"
+        android:background="@drawable/style_design_btn"
+        android:onClick="ConvertStoimost"
+        android:text="@string/btn"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <Spinner
+        android:id="@+id/spinner_one"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/edit_stoimost"
+        android:background="@drawable/style_design_spiner"
+        android:entries="@array/units"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateIds,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <EditText
+        android:id="@+id/edit_stoimost"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="245dp"
+        android:layout_height="47dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/style_design"
+        android:ellipsize="start"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/vvedit_ves"
+
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="@color/hint"
+
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck"
+        tools:layout_editor_absoluteY="202dp" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="112dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/btn_price"
+
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/result_text"
+        android:background="@drawable/style_design_btn_delete"
+        android:onClick="ClearEditTextAndResult"
+        android:text="@string/clearedittextandresult"
+        android:textSize="9sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ListView
+        android:id="@+id/test_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/result_text"
+        android:textIsSelectable="true"
+        android:focusable="false"
+        android:isScrollContainer="false"
+        android:stackFromBottom="false" />
+
+    <Button
+        android:id="@+id/btn_add_db"
+        android:layout_width="114dp"
+        android:layout_height="47dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="251dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/result_text"
+        android:background="@drawable/style_design_btn"
+        android:onClick="onOptionsItemSelected"
+        android:text="@string/add_db"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edit_stoimost"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginBottom="-20dp"
+        android:text="Изначальный вес:"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edit_price"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginStart="37dp"
+
+        android:layout_marginBottom="-80dp"
+        android:text="При стоимости:"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edit_price_za"
+
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="-192dp"
+        android:text="Расчет веса за:"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>

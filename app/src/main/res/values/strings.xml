@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Калькулятор стоимости</string>
+    <string-array name="units">
+        <item>кг </item>
+        <item>г</item>
+        <item>мл</item>
+        <item>л</item>
+    </string-array>
+
+    <string-array name="money">
+        <item>руб.</item>
+        <item>$</item>
+        <item>€</item>
+        <item>BYN</item>
+        <item>грив.</item>
+        <item>тен.</item>
+    </string-array>
+    <string name="btn">Рассчитать стоимость за:</string>
+    <string name="vvedit_stoimost"><font size ="14">Введите стоимость данного товара</font></string>
+    <string name="vvedit_ves"><font size ="14">Введите количество товара</font></string>
+    <string name="vvedit_ves_rashet"><font size ="14">Введите рассчитываемый вес</font></string>
+    <string name="clearedittextandresult">Очистить</string>
+    <string name="add_db">Добавить в заметки</string>
+    <string name="delete_btn">Удалить</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
